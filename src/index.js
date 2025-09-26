@@ -13,6 +13,7 @@ const PORT=process.env.PORT;
 
 const allowedOrigins = [
   "http://localhost:5173",
+  "https://vibe-frontend-umber.vercel.app",
   "https://vibe-backend-5bmf.onrender.com"];
 
 app.use(cors({
