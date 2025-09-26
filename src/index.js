@@ -13,14 +13,11 @@ const PORT=process.env.PORT;
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://9vplmll6-5173.inc1.devtunnels.ms",
-   "https://9vplmll6-5173.inc1.devtunnels.ms", // frontend
-  "https://9vplmll6-5001.inc1.devtunnels.ms", // backend
-];
+  "https://vibe-backend-5bmf.onrender.com"];
 
 app.use(cors({
   origin: allowedOrigins,
-  credentials: true, // important
+  credentials: true, 
 }));
 
 
