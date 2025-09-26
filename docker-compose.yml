@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      target: builder
+    container_name: vibe-backend
+    ports:
+      - "5001:5001"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    restart: always
+
+  mongo:
+    image: mongo:7
+    container_name: vibe-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
