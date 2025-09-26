@@ -40,3 +40,5 @@ Thumbs.db
 
 # MongoDB local database files (if running locally)
 data/db/
+db/
+logs/
